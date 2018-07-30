@@ -1,0 +1,21 @@
+#!/bin/sh
+# i3 startup script
+
+feh --bg-scale ~/Pictures/Wallpapers/Alfa\ Romeo/alfa-romeo-8c-competizione-444_1920x1080_172-hd.jpg
+#xinput --disable 11
+setxkbmap -layout se -option 'ctrl:nocaps,shift:both_capslock_cancel'
+
+# Other X keybindings
+#if [ -f ~/.xmodmaprc ]; then
+#  xmodmap ~/.xmodmaprc
+#fi
+
+xset dpms 600
+xset +fp /home/jocke/.fonts
+xset fp rehash
+
+nm-applet &
+pasystray &
+blueman-applet &
+
+xscreensaver -no-splash &
